@@ -10,14 +10,14 @@ class PlanScreen extends StatefulWidget {
 
 class _PlanScreenState extends State<PlanScreen> {
   final plan = Plan();
-  // ScrollController? scrollController;
+  ScrollController? scrollController;
   @override
   void initState() {
     super.initState();
-    // scrollController = ScrollController()
-    //   ..addListener(() {
-    //     FocusScope.of(context).requestFocus(FocusNode());
-    //   });
+    scrollController = ScrollController()
+      ..addListener(() {
+        FocusScope.of(context).requestFocus(FocusNode());
+      });
   }
 
   @override
@@ -35,7 +35,7 @@ class _PlanScreenState extends State<PlanScreen> {
 
   @override
   void dispose() {
-    // scrollController!.dispose();
+    scrollController!.dispose();
     super.dispose();
   }
 
