@@ -44,9 +44,10 @@ class _PlanScreenState extends State<PlanScreen> {
       child: Icon(Icons.add),
       onPressed: () {
         setState(() {
-          plan.tasks.add(
-            (Task()),
-          );
+          if (plan.tasks.isEmpty || plan.tasks.last.description != '')
+            plan.tasks.add(
+              (Task()),
+            );
         });
       },
     );
